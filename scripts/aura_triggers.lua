@@ -208,8 +208,8 @@ local function onEffectToBeRemoved(nodeEffect)
 end
 
 local addEffectByTable_old
-function addEffectByTable_new(vActor, rEffect, ...)
-	addEffectByTable_old(vActor, rEffect, ...)
+function addEffectByTable_new(vActor, rNewEffect, ...)
+	addEffectByTable_old(vActor, rNewEffect, ...)
 	local rNodeStart = ActorManager.resolveActor(vActor);
 	local nodeCT = DB.findNode(rNodeStart.sCTNode);
 	if AuraFactionConditional.DetectedEffectManager.parseEffectComp then
